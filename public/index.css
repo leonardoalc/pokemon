@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+:root {
+    --cor0: #8A2BE2;
+    --cor1: #F9CD0D;
+
+    --font0: "Montserrat", Arial, Helvetica, sans-serif;
+    --font1: "Nunito Sans", Helvetica, sans-serif;
+}
+html, body{
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--font1);
+}
+#container {
+    max-width: 1600px;
+    background-color: aqua;
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    display: flex;
+    background-color: var(--cor0);
+    height: 80px;
+    align-items: center;
+    color: var(--cor1);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.432);
+}
+#logo {
+    height: 48px;
+    width: 48px;
+    margin: auto 26px auto 26px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    font-variant: small-caps;
+}
+nav a:hover {
+    color: var(--cor1);
+}
+main {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 200px 30px;
+    grid-gap: 10px;
+    background-color: green;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+.pokeimg-container {
+    background-color: brown;
+    position: relative;
+    border-radius: 20px;
+}
+.pokeimg {
+    height: 230px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+.pokestats {
+    background-color: blue;
+}
+.pokename {
+    background-color: #8A2BE2;
+}
+.poketype {
+    display: flex;
+    background-color: #F9CD0D;
+    grid-row-end: 3;
+    font-weight: bold;
+    color: gray;
+}
+.type  {
+    width: 80px;
+    height: 30px;
+}
