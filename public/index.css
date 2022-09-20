@@ -45,8 +45,9 @@ nav a:hover {
     color: var(--cor1);
 }
 main {
+    margin-top: 50px;
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 230px 1fr;
     grid-template-rows: 200px 30px;
     grid-gap: 10px;
     background-color: green;
@@ -56,12 +57,16 @@ main {
     padding: 20px;
 }
 .pokeimg-container {
-    background-color: brown;
     position: relative;
     border-radius: 20px;
+    border: 3px solid black;
+
+    background-image: url(../images/cenario.jpg);
+    background-position: center center;
+    background-size: cover;
 }
 .pokeimg {
-    height: 230px;
+    height: 150px;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -79,6 +84,8 @@ main {
     grid-row-end: 3;
     font-weight: bold;
     color: gray;
+    align-items: center;
+    justify-content: center;
 }
 .type  {
     width: 80px;
