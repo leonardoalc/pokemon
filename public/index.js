@@ -21,19 +21,19 @@ function RandomPokemon() {
                 // adicionando habilidades e altura
                 let cont = 0
                 data.abilities.map((item) => {
-                    let ul = document.createElement("ul")
-                    ul.setAttribute("class", "habi-height-list")
                     if (cont == 0) {
-                        uli = document.querySelector("ul")
-                        uli.remove()
-                        pokestats.appendChild(ul)
-                        cont++
+                        cont = 1
+                        let ul = document.getElementsByClassName("habi-height-list")
+                        ul[0].remove()
+                        var uli = document.createElement("ul")
+                        uli.setAttribute("class", "habi-height-list")
+                        pokestats.appendChild(uli)
                     }
-                    let li = document.createElement("li")
+                    var li = document.createElement("li")
                     li.innerHTML = item.ability.name
-                    ul[0].appendChild(li)
+                    uli.appendChild(li)
                 })
-
+                alert("bbbb")
                 let height = document.createElement("p")
                 height.innerHTML = `${data.height / 10}m`
                 height.setAttribute("id", "alturapokemon")
