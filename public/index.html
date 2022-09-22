@@ -8,17 +8,26 @@
     <link rel="stylesheet" href="index.css">
     <title>Pokemon</title>
 </head>
-<body>
+<body onload="Pokemon()">
+        <div class="container-header">
+            <header>
+                <img src="../images/pikachu-icone.png" alt="pikachu-icone" id="logo">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">Tabela</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
     <div id="container">
-        <header>
-            <img src="../images/pikachu-icone.png" alt="pikachu-icone" id="logo">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#">Tabela</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div id="container-search">
+            <input type="search" name="" id="search" placeholder="Digite um nome ou id">
+            <button type="submit" for="search" id="search-button" onclick="SearchPokemon()"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div id="buttonrandom-container">
+            <button id="botao" onclick="RandomPokemon()">Surpreenda-me <i class="fa-solid fa-repeat"></i></button>
+        </div>
         <main>
             <div class="pokeimg-container">
                 <img src="" alt="" class="pokeimg">

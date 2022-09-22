@@ -12,11 +12,10 @@ html, body{
     padding: 0px;
     font-family: var(--font1);
 }
-#container {
-    max-width: 1600px;
-    background-color: aqua;
-    margin-left: auto;
-    margin-right: auto;
+.container-header {
+    background-color: var(--cor0);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.432);
+    margin-bottom: 20px;
 }
 header {
     display: flex;
@@ -24,12 +23,19 @@ header {
     height: 80px;
     align-items: center;
     color: var(--cor1);
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.432);
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 #logo {
     height: 48px;
     width: 48px;
     margin: auto 26px auto 26px;
+    justify-self: center;
+}
+nav {
+    margin-left: auto;
+    margin-right: 0px;
 }
 nav ul{
     display: flex;
@@ -43,6 +49,64 @@ nav a {
 }
 nav a:hover {
     color: var(--cor1);
+}
+#container {
+    max-width: 1600px;
+    background-color: aqua;
+    margin-left: auto;
+    margin-right: auto;
+}
+#container-search {
+    display: flex;
+    max-width: 500px;
+    margin: auto;
+}
+#search {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 15px 0px 0px 15px;
+    border: 2px solid var(--cor1);
+    border-right: none;
+}
+#search-button {
+    border: 2px solid var(--cor1);
+    border-left: none;
+    border-radius: 0px 15px 15px 0px;
+    width: 50px;
+    background-color: white;
+}
+#buttonrandom-container {
+    margin-top: 20px;
+    display: flex;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+#botao {
+    margin-left: auto;
+    margin-right: auto;
+    
+    width: 180px;
+    height: 50px;
+    
+    font-weight: bold;
+    font-size: 1.1em;
+
+    background-color: var(--cor1);
+    color: white;
+    
+
+    border: none;
+    border-radius: 15px;
+
+    box-shadow: -3px 3px 3px #0000007e;
+}
+#botao:active {
+   box-shadow: inset 3px 3px 3px #0000007e;
+   font-size: 1em;
 }
 main {
     margin-top: 50px;
@@ -75,8 +139,26 @@ main {
 .pokestats {
     background-color: blue;
 }
+.pokestats h2 {
+    margin-left: 10px;
+    font-size: 20px;
+    font-variant: small-caps;
+}
+#pokehabilidades {
+    height: 94px;
+}
+.habi-height-list {
+    list-style-type: none;
+    list-style-position:inside;
+    margin:0px 0px 0px 15px;
+    padding:0;
+    text-transform: capitalize;
+}
 .pokename {
     background-color: #8A2BE2;
+}
+#alturapokemon {
+    margin-left: 15px;
 }
 .poketype {
     display: flex;
@@ -90,4 +172,5 @@ main {
 .type  {
     width: 80px;
     height: 30px;
+    margin-right: 10px;
 }
