@@ -6,27 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
+    
     <title>Pokemon</title>
 </head>
-<body>
+<body onload="GenerateId(1)">
         <div class="container-header">
             <header>
                 <img src="../images/pikachu-icone.png" alt="pikachu-icone" id="logo">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="#">Tabela</a></li>
-                    </ul>
-                </nav>
             </header>
         </div>
     <div id="container">
         <div id="container-search">
-            <input type="search" name="" id="search" placeholder="Digite um nome ou id">
+            <input type="search" name="" id="search" placeholder="Digite um nome ou id" autocomplete="off">
             <button type="submit" for="search" id="search-button" onclick="SearchPokemon()"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
         </div>
         <div id="buttonrandom-container">
-            <button id="botao" onclick="RandomPokemon()">Surpreenda-me <i class="fa-solid fa-repeat"></i></button>
+            <button id="botao" onclick="GenerateId()">Surpreenda-me <i class="fa-solid fa-shuffle"></i></button>
         </div>
         <main>
             <div class="pokeimg-container">
@@ -34,18 +29,19 @@
             </div>
             <div class="pokestats">
                 <div id="pokehabilidades">
-                    <h2>Habilidades</h2>
+                    <p class="p">Habilidades</p>
                     <ul class="habi-height-list">
 
                     </ul>
                 </div>
                 
                 <div id="altura-container">
-                    <h2>Altura</h2>
+                    <p class="p">Altura</p>
+                    <p id="alturapokemon"></p>
                 </div>
             </div>  
             <div class="poketype">
-                <h2 id="nomepokemon"></h2>
+                <p id="nomepokemon"></p>
             </div>
             <div class="pokename">
             </div>

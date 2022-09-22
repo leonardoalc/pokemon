@@ -14,58 +14,56 @@ html, body{
 }
 .container-header {
     background-color: var(--cor0);
+    
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.432);
+    
     margin-bottom: 20px;
 }
 header {
     display: flex;
+    
     background-color: var(--cor0);
-    height: 80px;
-    align-items: center;
     color: var(--cor1);
+    
     max-width: 1600px;
+    height: 80px;
+    
+    align-items: center;
+    
     margin-left: auto;
     margin-right: auto;
+
+    justify-content: center;
 }
 #logo {
     height: 48px;
     width: 48px;
+    
     margin: auto 26px auto 26px;
-    justify-self: center;
-}
-nav {
-    margin-left: auto;
-    margin-right: 0px;
-}
-nav ul{
-    display: flex;
-    list-style: none;
-}
-nav a {
-    text-decoration: none;
-    color: white;
-    margin-right: 20px;
-    font-variant: small-caps;
-}
-nav a:hover {
-    color: var(--cor1);
 }
 #container {
     max-width: 1600px;
-    background-color: aqua;
+   
     margin-left: auto;
     margin-right: auto;
 }
 #container-search {
     display: flex;
-    max-width: 500px;
-    margin: auto;
-}
-#search {
-    width: 450px;
+    
+    max-width: 350px;
+    
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+}
+#search {
+    width: 300px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
     padding: 10px;
+    
     border-radius: 15px 0px 0px 15px;
     border: 2px solid var(--cor1);
     border-right: none;
@@ -74,15 +72,20 @@ nav a:hover {
     border: 2px solid var(--cor1);
     border-left: none;
     border-radius: 0px 15px 15px 0px;
+    
     width: 50px;
+    
     background-color: white;
 }
-#buttonrandom-container {
-    margin-top: 20px;
+#buttonrandom-container { 
     display: flex;
-    max-width: 500px;
+
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    
+    max-width: 500px;
+
     justify-content: center;
 }
 #botao {
@@ -106,24 +109,34 @@ nav a:hover {
 }
 #botao:active {
    box-shadow: inset 3px 3px 3px #0000007e;
+   
    font-size: 1em;
 }
 main {
-    margin-top: 50px;
     display: grid;
+
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 20px;
+
     grid-template-columns: 230px 1fr;
     grid-template-rows: 210px 30px;
     grid-gap: 10px;
-    background-color: green;
+    
+    border: 2px solid #0000003a;
+    border-radius: 15px;
+
+    box-shadow: 0px 1px 13px 0px #0000003a;
+
     width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
 }
 .pokeimg-container {
     position: relative;
+
     border-radius: 20px;
-    border: 3px solid black;
+    border: 2px solid black;
 
     background-image: url(../images/cenario.jpg);
     background-position: center center;
@@ -131,16 +144,27 @@ main {
 }
 .pokeimg {
     height: 150px;
+    
     position: absolute;
+    
     transform: translate(-50%, -50%);
+    
     top: 50%;
     left: 50%;
 }
 .pokestats {
-    background-color: blue;
+    background-color: var(--cor0);
+
+    color: white;
+
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.473);
+    box-shadow: 0px 1px 13px 0px #0000003a;
+
+    border-radius: 15px;
 }
-.pokestats h2 {
+.pokestats p.p {
     margin-left: 10px;
+    
     font-size: 20px;
     font-variant: small-caps;
 }
@@ -150,27 +174,69 @@ main {
 .habi-height-list {
     list-style-type: none;
     list-style-position:inside;
+    
     margin:0px 0px 0px 15px;
+    
     padding:0;
+    
     text-transform: capitalize;
 }
 .pokename {
-    background-color: #8A2BE2;
+    display: flex;
+
+    justify-content: center;
+}
+#nomepokemon {
+    font-size: 1.25em;
 }
 #alturapokemon {
     margin-left: 15px;
 }
 .poketype {
     display: flex;
-    background-color: #F9CD0D;
-    grid-row-end: 3;
-    font-weight: bold;
+    
     color: gray;
+
+    grid-row-end: 3;
+    
+    font-weight: bold;
+    
     align-items: center;
     justify-content: center;
 }
 .type  {
     width: 80px;
     height: 30px;
+
     margin-right: 10px;
+}
+/*MEDIA QUERY*/
+@media (max-width: 565px) {
+    main {
+        grid-template-columns: 150px 150px;
+        grid-template-rows: 130px 21px;
+
+        width: 300px;
+    }
+    .pokeimg {
+        height: 85px;
+    }
+    .pokestats {
+        font-size: 0.7em;
+    }
+    .pokestats p.p {        
+        font-size: 1.05em;
+    }
+    #pokehabilidades {
+        height: 61px;
+    }
+    #nomepokemon {
+        font-size: 0.9em;
+    }
+    .type  {
+        width: 55px;
+        height: 21px;
+    
+        margin-right: 7px;
+    }
 }
