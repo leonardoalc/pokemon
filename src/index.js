@@ -72,7 +72,7 @@ function Pokemon(idname) {
                     }
                     let img = document.createElement("img")
                     img.setAttribute("class", "type")
-                    img.src = `../images/type${tipo.type.name}.png`
+                    img.src = `images/type${tipo.type.name}.png`
                     divtype.appendChild(img)
                 })
                 
